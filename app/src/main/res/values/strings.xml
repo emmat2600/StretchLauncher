@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StretchLauncher</string>
+    <string name="title_activity_display_swim">display_swim</string>
+    <string name="previous_swim">Previous Swim</string>
+</resources>

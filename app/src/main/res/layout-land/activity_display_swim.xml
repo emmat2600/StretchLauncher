@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.emma.stretchlauncher.display_swim"
+    android:id="@+id/display_swim_layout"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/aislogo"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Athlete: XXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/athlete_name"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Stroke: YYYY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stroke"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/athlete_name"
+        android:layout_alignLeft="@+id/athlete_name"
+        android:layout_alignStart="@+id/athlete_name"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="Resistance Level: ZZZZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Resistance"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/stroke"
+        android:layout_alignLeft="@+id/stroke"
+        android:layout_alignStart="@+id/stroke" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/graph2"
+        android:id="@+id/previous_swim_graph"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="93dp"
+        android:layout_below="@+id/current_graph_label"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/Resistance"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Current Swim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_graph_label"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_marginRight="108dp"
+        android:layout_marginEnd="108dp"
+        android:layout_below="@+id/current_swim"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/graph1"
+        android:id="@+id/current_swim"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:onClick="enlarge_current"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignLeft="@+id/previous_swim_graph"
+        android:layout_alignStart="@+id/previous_swim_graph"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="23dp" />
+</RelativeLayout>

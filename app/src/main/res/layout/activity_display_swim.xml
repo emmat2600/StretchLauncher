@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.emma.stretchlauncher.display_swim"
+    android:id="@+id/display_swim_layout"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/aislogo"
+        android:layout_marginTop="26dp"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Resistance Level: ZZZZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Resistance"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/athlete_name"
+        android:layout_alignBottom="@+id/athlete_name"
+        android:layout_toRightOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/imageView3" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/graph1"
+        android:id="@+id/current_swim"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/athlete_name"
+        android:layout_alignRight="@+id/previous_swim_graph"
+        android:layout_alignEnd="@+id/previous_swim_graph"
+        android:layout_marginTop="13dp"
+        android:onClick="enlarge_current" />
+
+    <TextView
+        android:text="Stroke: YYYY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stroke"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Athlete: XXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/athlete_name"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/stroke"
+        android:layout_alignBottom="@+id/stroke"
+        android:layout_alignLeft="@+id/previous_swim_graph"
+        android:layout_alignStart="@+id/previous_swim_graph" />
+
+    <TextView
+        android:text="Current Swim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_graph_label"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_below="@+id/current_swim"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/graph2"
+        android:id="@+id/previous_swim_graph"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/current_graph_label"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Previous Swim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="103dp"
+        android:id="@+id/second_graph_label"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/previous_swim_graph" />
+</RelativeLayout>
