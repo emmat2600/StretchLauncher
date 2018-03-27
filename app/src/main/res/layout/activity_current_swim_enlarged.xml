@@ -4,10 +4,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
+    <com.jjoe64.graphview.GraphView
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/graph1"
-        android:id="@+id/imageView3"
-        android:background="@color/colorPrimaryDark" />
+        android:layout_width="match_parent"
+        android:id="@+id/graph"
+        />
+
+
 </LinearLayout>
