@@ -4,98 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context="com.example.emma.stretchlauncher.display_swim"
     android:id="@+id/display_swim_layout"
     android:background="@color/colorPrimaryDark">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/aislogo"
-        android:layout_marginTop="10dp"
-        android:id="@+id/imageView3"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:text="Athlete: XXXX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
-        android:id="@+id/athlete_name"
-        android:textColor="@android:color/background_light" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/aislogo"
+            android:id="@+id/imageView3"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:text="Stroke: YYYY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/stroke"
-        android:textColor="@android:color/background_light"
-        android:layout_below="@+id/athlete_name"
-        android:layout_alignLeft="@+id/athlete_name"
-        android:layout_alignStart="@+id/athlete_name"
-        android:layout_marginTop="12dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Resistance Level: ZZZZ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Resistance"
-        android:textColor="@android:color/background_light"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/stroke"
-        android:layout_alignLeft="@+id/stroke"
-        android:layout_alignStart="@+id/stroke" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/graph2"
-        android:id="@+id/previous_swim_graph"
-        android:background="@color/colorPrimaryDark"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="93dp"
-        android:layout_below="@+id/current_graph_label"
-        android:layout_alignParentRight="true"
-        android:layout_alignRight="@+id/Resistance"
-        android:layout_alignParentEnd="true" />
+                <TextView
+                    android:text="Resistance Level: ZZZZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Resistance"
+                    android:textColor="@android:color/background_light"
+                    tools:layout_constraintTop_creator="1"
+                    app:layout_constraintTop_toBottomOf="@+id/stroke"
+                    tools:layout_constraintLeft_creator="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
 
-    <TextView
-        android:text="Current Swim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/current_graph_label"
-        android:textColor="@color/colorAccent"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:layout_marginRight="108dp"
-        android:layout_marginEnd="108dp"
-        android:layout_below="@+id/current_swim"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+                <TextView
+                    android:text="Stroke: YYYY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stroke"
+                    android:textColor="@android:color/background_light"
+                    tools:layout_constraintTop_creator="1"
+                    app:layout_constraintTop_toBottomOf="@+id/athlete_name"
+                    tools:layout_constraintLeft_creator="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/graph1"
-        android:id="@+id/current_swim"
-        android:background="@color/colorPrimaryDark"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:onClick="enlarge_current"
-        android:layout_alignRight="@+id/imageView3"
-        android:layout_alignLeft="@+id/previous_swim_graph"
-        android:layout_alignStart="@+id/previous_swim_graph"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="23dp" />
+                <TextView
+                    android:text="Athlete: XXXX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/athlete_name"
+                    android:textColor="@android:color/background_light"
+                    tools:layout_constraintTop_creator="1"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    tools:layout_constraintLeft_creator="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </GridLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/graph1"
+            android:id="@+id/current_swim"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:onClick="enlarge_current"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Current Swim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_graph_label"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="@+id/current_swim"
+            app:layout_constraintTop_toBottomOf="@+id/current_swim"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
